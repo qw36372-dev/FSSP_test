@@ -6,11 +6,11 @@ from telebot import types
 
 # === НАСТРОЙКИ ===
 
-MAIN_BOT_TOKEN = os.environ.get("BOT_TOKEN")
+API_TOKEN = os.environ.get("BOT_TOKEN")
 if not API_TOKEN:
     raise RuntimeError("BOT_TOKEN not set in environment")
 
-bot = telebot.TeleBot(MAIN_BOT_TOKEN)
+bot = telebot.TeleBot(API_TOKEN)
 
 
 # путь к файлу картинки (логотип или фон)
@@ -40,7 +40,7 @@ SPECIALIZATION_BOTS = [
 
 ANTI_SPAM_INTERVAL = 2  # можно увеличить при необходимости
 
-bot = telebot.TeleBot(MAIN_BOT_TOKEN)
+bot = telebot.TeleBot(API_TOKEN)
 
 
 # Временное хранилище последнего действия пользователя
